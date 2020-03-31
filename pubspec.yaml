@@ -1,0 +1,9 @@
+name: dart_start
+
+environment:
+  # https://dart.dev/tools/pub/pubspec#sdk-constraints
+  sdk: ^2.7.0
+
+
+dev_dependencies:
+    test: ^1.14.2
