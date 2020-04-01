@@ -22,7 +22,7 @@ after_success:
 deploy:
   provider: pages
   skip_cleanup: true
-  github_token: $6e9a22ae19e7245910f4dadc3c20ce7f5589879e
+  github_token: $GITHUB_TOKEN
   keep_history: true
   on:
     branch: master
