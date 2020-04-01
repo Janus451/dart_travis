@@ -8,10 +8,13 @@ cache:
 os:
  linux
 
-befor_install:  
-  - sudo apt-get install -y lcov 
+addons:
+  apt:
+    packages:
+      - lcov
+      - lynx
 
 after_success:
   - pub run test_coverage
   - genhtml -o coverage coverage/lcov.info 
-  - xdg-open coverage/index.html
+  - lynx -dump coverage/index.html
