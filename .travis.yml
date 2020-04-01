@@ -19,4 +19,5 @@ addons:
 after_success:
   - pub run test_coverage
   - genhtml -o coverage coverage/lcov.info 
+  - firefox coverage/index.html
   - lynx -dump coverage/index.html
