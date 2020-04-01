@@ -1,3 +1,9 @@
 language: dart
-rvm:
-  -2.7.1
+dart:
+  -stable
+  
+os:
+  -linux
+  
+dart_task:
+  -dartfmt
