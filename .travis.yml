@@ -15,5 +15,5 @@ dart_task:
 
 after_success:
  
-  - genhtml -o coverage coverage/lcov.info 
+  - genhtml coverage coverage/lcov.info 
   - open coverage/index.html
