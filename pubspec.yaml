@@ -7,3 +7,4 @@ environment:
 
 dev_dependencies:
     test: ^1.14.2
+    test_coverage: ^0.4.1
