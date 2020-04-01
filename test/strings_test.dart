@@ -62,4 +62,5 @@ void testStrings_substringBefore() {
     final result = string.substringBefore('test1check','1');
     
     t.expect(result, t.equals('test'));
+    t.expect(result, t.isNotNull);
 }
