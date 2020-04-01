@@ -7,5 +7,6 @@ dart_task:
   -dartfmt
 
 after_succes:
-  genhtml -o coverage coverage/lcov.info
+  apt-get install -y lcov \
+  genhtml -o coverage coverage/lcov.info \
   open coverage/index.html
