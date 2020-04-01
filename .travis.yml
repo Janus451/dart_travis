@@ -9,11 +9,7 @@ befor_install:
   
   - sudo apt-get install -y lcov 
 
-dart_task:
-  dartanalyzer
-  dartfmt
-
 after_success:
- 
+  - pub run test_coverage
   - genhtml coverage coverage/lcov.info 
   - open coverage/index.html
