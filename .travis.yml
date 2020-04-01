@@ -5,3 +5,6 @@ rvm:
 dart_task:
   -dartanalyzer
   -dartfmt
+
+after_succes:
+  -genhtml -o coverage coverage/lcov.info
