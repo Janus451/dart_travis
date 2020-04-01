@@ -1,12 +1,19 @@
 language: dart
 rvm:
-  -stable
-  
-dart_task:
-  -dartanalyzer
-  -dartfmt
+  stable
 
-after_succes:
-  apt-get install -y lcov \
-  genhtml -o coverage coverage/lcov.info \
-  open coverage/index.html
+os:
+ linux
+
+befor_install:
+  
+  -sudo apt-get install -y lcov 
+
+dart_task:
+  dartanalyzer
+  dartfmt
+
+after_success:
+ 
+  -genhtml -o coverage coverage/lcov.info 
+  -open coverage/index.html
