@@ -11,5 +11,5 @@ befor_install:
 
 after_success:
   - pub run test_coverage
-  - genhtml coverage -o coverage/lcov.info 
+  - genhtml -o coverage coverage/lcov.info 
   - open coverage/index.html
