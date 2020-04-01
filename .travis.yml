@@ -1,7 +1,7 @@
 language: dart
-dart:
--stable
+rvm:
+  -stable
   
 dart_task:
--dartanalyzer
--dartfmt
+  -dartanalyzer
+  -dartfmt
