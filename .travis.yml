@@ -26,13 +26,12 @@ after_success:
   
 
 deploy:
-  provider: releases  
-  api:key: $GITHUB_TOKEN
-  file_glob: true
-  file:  coverage/*/** 
+  provider: pages  
   skip_cleanup: true
+  local_dir: coverage/
+  github_token: $GITHUB_TOKEN
   on:
-    tags: false
+    branch: master
     
 
 
