@@ -27,5 +27,8 @@ deploy:
     branch: master
 
 cache:
-  - pub get
+  directories:
+    - $HOME/.pub-cache
+    - $HOME/.packages
+  
 
