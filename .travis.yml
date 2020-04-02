@@ -28,7 +28,7 @@ after_success:
 deploy:
   provider: releases  
   api:key: $GITHUB_TOKEN
-  file:  coverage/index-sort-f.html  
+  file:  coverage/*/** 
   skip_cleanup: true
   on:
     tags: false
