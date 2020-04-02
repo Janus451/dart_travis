@@ -5,6 +5,10 @@ rvm:
 os:
  linux
 
+cache:
+  directories:
+    - $HOME/.pub-cache
+
 sudo: false
 
 addons:
@@ -19,17 +23,15 @@ after_success:
   
 
 deploy:
-  provider: releases
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN
+  provider: releases  
+  api:key: $GITHUB_TOKEN
   file: coverage/index.html
-  keep_history: true
+  skip_cleanup: true
   on:
-    branches: master
+    tags: false
+    
 
-cache:
-  directories:
-    - $HOME/.pub-cache
-    - $HOME/.packages
+
+   
   
 
