@@ -24,7 +24,7 @@ deploy:
   file: coverage/index.html
   skip_cleanup: true
   on:
-    branch: master
+    tag: true
 
 cache:
   directories:
