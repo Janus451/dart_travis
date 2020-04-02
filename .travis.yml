@@ -19,12 +19,13 @@ after_success:
   
 
 deploy:
-  provider: releases
-  github_token: $GITHUB_TOKEN
-  file: coverage/index.html
+  provider: pages
   skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  #file: coverage/index.html
+  keep_history: true
   on:
-    tag: true
+    branches: master
 
 cache:
   directories:
