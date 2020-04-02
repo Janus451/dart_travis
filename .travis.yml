@@ -15,7 +15,10 @@ addons:
   apt:
     packages:
       - lcov
-      
+
+branches:
+  except:
+    - /^untagged/
 
 after_success:
   - pub run test_coverage
