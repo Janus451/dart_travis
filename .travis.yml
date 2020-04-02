@@ -28,7 +28,7 @@ after_success:
 deploy:
   provider: releases  
   api:key: $GITHUB_TOKEN
-  file: coverage/index.html
+  file: /home/travis/build/Janus451/dart_travis/coverage
   skip_cleanup: true
   on:
     tags: false
