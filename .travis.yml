@@ -22,8 +22,7 @@ deploy:
   provider: releases
   github_token: $GITHUB_TOKEN
   file: coverage/index.html
-  on:
-    tags: true
+  skip_cleanup: true
 
 cache:
   directories:
